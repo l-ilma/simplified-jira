@@ -6,6 +6,9 @@
 /out-tsc
 /bazel-out
 
+#Test cache and reports
+/jest
+
 # Node
 /node_modules
 npm-debug.log
