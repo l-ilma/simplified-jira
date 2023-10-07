@@ -1,0 +1,7 @@
+@import "common";
+
+.card-container {
+  @extend .flex-column;
+  border: 1px solid lightgrey;
+  gap: 1rem;
+}

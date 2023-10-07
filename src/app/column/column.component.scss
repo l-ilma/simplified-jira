@@ -1,0 +1,12 @@
+@import "common";
+
+.column-container {
+  @extend .flex-column;
+  gap: 2rem;
+  padding: 0 1.5rem;
+
+  .cards-container {
+    @extend .flex-column;
+    gap: 1rem;
+  }
+}

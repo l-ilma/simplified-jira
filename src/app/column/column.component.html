@@ -1,0 +1,8 @@
+<div class="column-container">
+  <span>{{ data?.title }}</span>
+  <div class="cards-container">
+    <ng-container *ngFor="let card of data?.cards">
+      <app-card [data]="card"></app-card>
+    </ng-container>
+  </div>
+</div>
