@@ -1,5 +1,7 @@
-<div class="card-container">
-  <span>{{ data?.title }}</span>
-  <div>{{ data?.description }}</div>
-  <span>{{ data?.status }}</span>
+<div *ngIf="data" class="card-container">
+  <div class="header">
+    <span>{{ data.title }}</span>
+    <img [src]="PriorityIconMapper.getPriorityIcon(data.priority)" alt="priority" />
+  </div>
+  <img [src]="data.assignee.avatar" alt="avatar" />
 </div>

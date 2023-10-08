@@ -1,5 +1,5 @@
-<div class="container">
-  <ng-container *ngFor="let column of columns">
-    <app-column [data]="column"></app-column>
+<div class="container" [ngClass]="{ mobile: isPhonePortrait$ | async }" cdkDropListGroup>
+  <ng-container *ngFor="let column of columns$ | async; let i = index">
+    <app-column [data]="column"> </app-column>
   </ng-container>
 </div>

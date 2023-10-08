@@ -2,6 +2,24 @@
 
 .card-container {
   @extend .flex-column;
+
   border: 1px solid lightgrey;
+  background-color: white;
   gap: 1rem;
+  box-shadow: 0.01rem 0.05rem lightgray;
+  padding: 0.5rem;
+  color: darkslategray;
+
+  .header {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  img {
+    width: 40px;
+    height: 40px
+  }
+
 }

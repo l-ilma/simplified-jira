@@ -1,7 +1,11 @@
 .container {
   display: grid;
-  grid-auto-flow: column;
   height: 100%;
-  gap: 1.5rem;
   padding: 2rem 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1.5rem;
+
+  &.mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

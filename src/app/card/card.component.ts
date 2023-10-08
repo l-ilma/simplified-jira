@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardConfig } from '../models/card.config';
+import { Ticket } from '../models';
+import { PriorityIconMapper } from '../priority-icon-mapper';
 
 @Component({
   selector: 'app-card',
@@ -11,5 +12,6 @@ import { CardConfig } from '../models/card.config';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardComponent {
-  @Input({ required: true }) data: CardConfig | null = null;
+  @Input({ required: true }) data: Ticket | null = null;
+  protected readonly PriorityIconMapper = PriorityIconMapper;
 }

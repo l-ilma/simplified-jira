@@ -1,8 +1,12 @@
-<div class="column-container">
-  <span>{{ data?.title }}</span>
-  <div class="cards-container">
-    <ng-container *ngFor="let card of data?.cards">
-      <app-card [data]="card"></app-card>
-    </ng-container>
+<div class="column-container" *ngIf="data">
+  <span>{{ data.title }}</span>
+  <div
+    class="cards-container"
+    cdkDropList
+    [cdkDropListData]="data.tickets"
+    (cdkDropListDropped)="onTicketDropped($event)">
+    <div *ngFor="let ticket of data.tickets">
+      <app-card [data]="ticket" cdkDrag [cdkDragData]="ticket"></app-card>
+    </div>
   </div>
 </div>
